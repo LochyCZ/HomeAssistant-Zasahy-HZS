@@ -1,0 +1,223 @@
+{
+ "typy": [
+  {
+   "id": 3100,
+   "nazev": "POŽÁR"
+  },
+  {
+   "id": 3200,
+   "nazev": "DOPRAVNÍ NEHODA"
+  },
+  {
+   "id": 3400,
+   "nazev": "ÚNIK NEBEZPEČNÝCH LÁTEK"
+  },
+  {
+   "id": 3500,
+   "nazev": "TECHNICKÁ POMOC"
+  },
+  {
+   "id": 3550,
+   "nazev": "ZÁCHRANA OSOB A ZVÍŘAT"
+  },
+  {
+   "id": 3700,
+   "nazev": "JINÁ UDÁLOST"
+  },
+  {
+   "id": 3800,
+   "nazev": "PLANÝ POPLACH"
+  },
+  {
+   "id": 3900,
+   "nazev": "TECHNOLOGICKÝ TEST"
+  },
+  {
+   "id": 3600,
+   "nazev": "FORMÁLNĚ ZALOŽENÁ UDÁLOST"
+  },
+  {
+   "id": 5000,
+   "nazev": "UDÁLOST NA OBJEKT"
+  }
+ ],
+ "stavy": [
+  {
+   "id": 620,
+   "nazev": "Exportovaná ZOZ Online"
+  },
+  {
+   "id": 520,
+   "nazev": "Exportovaná do SK"
+  },
+  {
+   "id": 200,
+   "nazev": "Inicializovaná"
+  },
+  {
+   "id": 440,
+   "nazev": "Likvidovaná"
+  },
+  {
+   "id": 430,
+   "nazev": "Lokalizovaná"
+  },
+  {
+   "id": 450,
+   "nazev": "Odjezd poslední jednotky"
+  },
+  {
+   "id": 300,
+   "nazev": "Odložená"
+  },
+  {
+   "id": 120,
+   "nazev": "Odmítnuto"
+  },
+  {
+   "id": 410,
+   "nazev": "Otevřená SaP na cestě"
+  },
+  {
+   "id": 420,
+   "nazev": "Otevřená, SaP na místě"
+  },
+  {
+   "id": 400,
+   "nazev": "Otevřená, bez SaP"
+  },
+  {
+   "id": 780,
+   "nazev": "Potvrzená krajským garantem"
+  },
+  {
+   "id": 210,
+   "nazev": "Převzatá"
+  },
+  {
+   "id": 600,
+   "nazev": "Převzatá VZ"
+  },
+  {
+   "id": 700,
+   "nazev": "Převzatá ZPP"
+  },
+  {
+   "id": 750,
+   "nazev": "Převzatá garantem za SSU"
+  },
+  {
+   "id": 800,
+   "nazev": "Připravená k archivaci"
+  },
+  {
+   "id": 500,
+   "nazev": "Ukončená OS"
+  },
+  {
+   "id": 610,
+   "nazev": "Ukončená VZ"
+  },
+  {
+   "id": 710,
+   "nazev": "Ukončená ZPP"
+  },
+  {
+   "id": 760,
+   "nazev": "Ukončená garantem za SSU"
+  },
+  {
+   "id": 510,
+   "nazev": "Uzavřená OS"
+  },
+  {
+   "id": 130,
+   "nazev": "Zapracováno k řešené události"
+  },
+  {
+   "id": 110,
+   "nazev": "Čekající - přečteno"
+  },
+  {
+   "id": 100,
+   "nazev": "Čekající na odbavení"
+  }
+ ],
+ "podtypy": [
+  {
+   "id": 3109,
+   "nazev": "POPELNICE, KONTEJNER",
+   "typId": 3100
+  },
+  {
+   "id": 3213,
+   "nazev": "ÚKLID VOZOVKY",
+   "typId": 3200
+  },
+  {
+   "id": 3525,
+   "nazev": "OTEVŘENÍ UZAVŘENÝCH PROSTOR",
+   "typId": 3500
+  }
+ ],
+ "okresy": [
+  {
+   "id": 3708,
+   "nazev": "Kroměříž",
+   "krajId": 141
+  },
+  {
+   "id": 3711,
+   "nazev": "Uherské Hradiště",
+   "krajId": 141
+  },
+  {
+   "id": 3810,
+   "nazev": "Vsetín",
+   "krajId": 141
+  },
+  {
+   "id": 3705,
+   "nazev": "Zlín",
+   "krajId": 141
+  }
+ ],
+ "kraje": [
+  {
+   "id": 116,
+   "nazev": "Jihomoravský"
+  },
+  {
+   "id": 132,
+   "nazev": "Moravskoslezský"
+  },
+  {
+   "id": 124,
+   "nazev": "Olomoucký"
+  },
+  {
+   "id": 7033,
+   "nazev": "Trenčianský kraj"
+  },
+  {
+   "id": 7032,
+   "nazev": "Trnavský kraj"
+  },
+  {
+   "id": 141,
+   "nazev": "Zlínský"
+  },
+  {
+   "id": 7035,
+   "nazev": "Žilinský kraj"
+  }
+ ],
+ "konfigurace": {
+  "title": "Přehled událostí HZS",
+  "reports": "http://10.152.177.17:8070/activeReport/",
+  "show_print": false,
+  "show_stav_udalosti": false,
+  "show_aktualne_zasahujici": false,
+  "krajId": 141
+ }
+}

@@ -1,0 +1,327 @@
+[
+ {
+  "id": 421093061,
+  "casOhlaseni": "2026-10-15T16:41:43.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3525,
+  "poznamkaProMedia": "Otevření bytu.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3710,
+   "nazev": "Třebíč"
+  },
+  "obec": "Trnava",
+  "castObce": "Trnava",
+  "ORP": "Třebíč",
+  "ulice": null,
+  "gis1": "646771",
+  "gis2": "1148601",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421090061,
+  "casOhlaseni": "2026-10-15T15:48:53.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3542,
+  "poznamkaProMedia": "Odstranění obtížného hmyzu.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3710,
+   "nazev": "Třebíč"
+  },
+  "obec": "Budkov",
+  "castObce": "Budkov",
+  "ORP": "Moravské Budějovice",
+  "ulice": null,
+  "gis1": "668405",
+  "gis2": "1168556",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421089061,
+  "casOhlaseni": "2026-10-15T15:33:15.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3525,
+  "poznamkaProMedia": "Otevření bytu.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3707,
+   "nazev": "Jihlava"
+  },
+  "obec": "Telč",
+  "castObce": "Telč-Staré Město",
+  "ORP": "Telč",
+  "ulice": "Radkovská",
+  "gis1": "681827",
+  "gis2": "1153338",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421088061,
+  "casOhlaseni": "2026-10-15T14:58:26.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3100,
+  "podtypId": 3106,
+  "poznamkaProMedia": "Požár pařezu a trávy na ploše asi 1x1 metr. Byla provedena lokalizace a likvidace požáru.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3707,
+   "nazev": "Jihlava"
+  },
+  "obec": "Střítež",
+  "castObce": "Střítež",
+  "ORP": "Jihlava",
+  "ulice": null,
+  "gis1": "666756",
+  "gis2": "1121994",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421086061,
+  "casOhlaseni": "2026-10-15T14:51:06.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3542,
+  "poznamkaProMedia": "Odstranění obtížného hmyzu.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3304,
+   "nazev": "Pelhřimov"
+  },
+  "obec": "Olešná",
+  "castObce": "Olešná",
+  "ORP": "Pelhřimov",
+  "ulice": null,
+  "gis1": "692539",
+  "gis2": "1121425",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421080061,
+  "casOhlaseni": "2026-10-15T13:38:29.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3528,
+  "poznamkaProMedia": "Měření koncentrace plynu v RD.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3707,
+   "nazev": "Jihlava"
+  },
+  "obec": "Jihlava",
+  "castObce": "Jihlava",
+  "ORP": "Jihlava",
+  "ulice": "Brněnská",
+  "gis1": "668213",
+  "gis2": "1130056",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421076061,
+  "casOhlaseni": "2026-10-15T13:24:20.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3501,
+  "poznamkaProMedia": "Úklid vozovky.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3714,
+   "nazev": "Žďár nad Sázavou"
+  },
+  "obec": "Žďár nad Sázavou",
+  "castObce": "Žďár nad Sázavou 2",
+  "ORP": "Žďár nad Sázavou",
+  "ulice": "Bezručova",
+  "gis1": "641628",
+  "gis2": "1113359",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421074061,
+  "casOhlaseni": "2026-10-15T13:13:27.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3550,
+  "podtypId": 3543,
+  "poznamkaProMedia": "Transport pacienta na žádost ZZS.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3710,
+   "nazev": "Třebíč"
+  },
+  "obec": "Rouchovany",
+  "castObce": "Rouchovany",
+  "ORP": "Třebíč",
+  "ulice": null,
+  "gis1": "635683",
+  "gis2": "1170809",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421072061,
+  "casOhlaseni": "2026-10-15T11:40:24.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3200,
+  "podtypId": 3214,
+  "poznamkaProMedia": "DN 5 OA, 2 zraněné osoby. Zabezpečení havarovaných vozidel proti požáru a proti úniku provozních kapalin.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3707,
+   "nazev": "Jihlava"
+  },
+  "obec": "Jihlava",
+  "castObce": "Hosov",
+  "ORP": "Jihlava",
+  "ulice": null,
+  "gis1": "673046",
+  "gis2": "1130460",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421068061,
+  "casOhlaseni": "2026-10-15T09:56:36.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3800,
+  "podtypId": 3811,
+  "poznamkaProMedia": "Planý poplach - nepotvrzená DN.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3707,
+   "nazev": "Jihlava"
+  },
+  "obec": "Jihlava",
+  "castObce": "Jihlava",
+  "ORP": "Jihlava",
+  "ulice": null,
+  "gis1": "669653",
+  "gis2": "1127568",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421066061,
+  "casOhlaseni": "2026-10-15T09:35:12.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3100,
+  "podtypId": 3101,
+  "poznamkaProMedia": "Požár dřevěného přístřešku, lokalizace.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3714,
+   "nazev": "Žďár nad Sázavou"
+  },
+  "obec": "Velké Meziříčí",
+  "castObce": "Velké Meziříčí",
+  "ORP": "Velké Meziříčí",
+  "ulice": "Novosady",
+  "gis1": "639032",
+  "gis2": "1138509",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421065061,
+  "casOhlaseni": "2026-10-15T09:14:00.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3800,
+  "podtypId": 3811,
+  "poznamkaProMedia": "Planý poplach.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3714,
+   "nazev": "Žďár nad Sázavou"
+  },
+  "obec": "Bystřice nad Pernštejnem",
+  "castObce": null,
+  "ORP": "Bystřice nad Pernštejnem",
+  "ulice": "Větrná",
+  "gis1": "619025",
+  "gis2": "1121443",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 421052061,
+  "casOhlaseni": "2026-10-15T05:46:07.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3800,
+  "podtypId": 3811,
+  "poznamkaProMedia": "Planý poplach.",
+  "kraj": {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  "okres": {
+   "id": 3601,
+   "nazev": "Havlíčkův Brod"
+  },
+  "obec": "Havlíčkův Brod",
+  "castObce": "Havlíčkův Brod",
+  "ORP": "Havlíčkův Brod",
+  "ulice": null,
+  "gis1": "665921",
+  "gis2": "1107362",
+  "zoc": false,
+  "silnice": null
+ }
+]

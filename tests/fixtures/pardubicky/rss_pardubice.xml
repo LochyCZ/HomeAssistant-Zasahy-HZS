@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title><![CDATA[HZS Pardubického kraje - Výjezdy]]></title>
+  <link>http://www.hzscr.cz/hzs-pardubickeho-kraje.aspx</link>
+  <description>Výjezdy hasičů na území Pardubického kraje</description>
+  <language>cs</language><item>
+    <title><![CDATA[Řečany nad Labem - Labětín]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252734053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/dopravni-nehoda.png" height="30" width="30" alt="Dopravní nehoda" style="float:left;padding:5px;" /> </p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 18:26:29 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252734053</guid>
+  </item></channel>
+</rss>

@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Zásahy HZS",
+        "description": "Vyber kraj. Integrace čte veřejný Přehled událostí HZS daného kraje.",
+        "data": {
+          "kraj": "Kraj"
+        }
+      },
+      "url": {
+        "title": "Vlastní adresa",
+        "description": "Adresa Přehledu událostí HZS na systému WebOhled (stránka s tabulkou událostí a mapou). Adresu API integrace dohledá sama.",
+        "data": {
+          "base_url": "Adresa přehledu událostí"
+        }
+      },
+      "filtr": {
+        "title": "Filtr zásahů – {kraj}",
+        "description": "Vyber okres a případně jen některé typy událostí. Prázdný výběr typů = všechny.",
+        "data": {
+          "okres_id": "Okres",
+          "typy": "Typy událostí"
+        }
+      },
+      "vyber_kraje": {
+        "title": "Který kraj?",
+        "description": "Tento web neuvádí, ke kterému kraji patří. Vyber ho.",
+        "data": {
+          "kraj_id": "Kraj"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Server se nepodařilo kontaktovat",
+      "invalid_api": "Na adrese není API Přehledu událostí HZS"
+    },
+    "abort": {
+      "already_configured": "Tento kraj a okres už je nastavený"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavení",
+        "data": {
+          "typy": "Typy událostí (prázdné = všechny)",
+          "scan_interval": "Interval kontroly",
+          "nacitat_techniku": "Načítat zasahující jednotky a techniku",
+          "mapa": "Zobrazovat zásahy na mapě"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dnes": {
+        "name": "Zásahy dnes"
+      },
+      "aktivni": {
+        "name": "Probíhající zásahy"
+      },
+      "tyden": {
+        "name": "Zásahy za 7 dní"
+      },
+      "posledni": {
+        "name": "Poslední zásah"
+      },
+      "posledni_cas": {
+        "name": "Čas posledního zásahu"
+      },
+      "nejblizsi": {
+        "name": "Nejbližší dnešní zásah"
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+[
+ {
+  "id": 514330062,
+  "casOhlaseni": "2026-10-16T16:30:43.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 3528,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 116,
+   "nazev": "Jihomoravský"
+  },
+  "okres": {
+   "id": 3702,
+   "nazev": "Brno-město"
+  },
+  "obec": "Brno",
+  "castObce": "Černá Pole",
+  "ORP": "Brno",
+  "ulice": "Lidická",
+  "gis1": "598117",
+  "gis2": "1159822",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 514328062,
+  "casOhlaseni": "2026-10-16T16:23:19.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3100,
+  "podtypId": 3109,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 116,
+   "nazev": "Jihomoravský"
+  },
+  "okres": {
+   "id": 3702,
+   "nazev": "Brno-město"
+  },
+  "obec": "Brno",
+  "castObce": "Zábrdovice",
+  "ORP": "Brno",
+  "ulice": "Jugoslávská",
+  "gis1": "596886",
+  "gis2": "1159920",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 514318062,
+  "casOhlaseni": "2026-10-16T14:57:47.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3200,
+  "podtypId": 3214,
+  "poznamkaProMedia": "DN motocyklu.",
+  "kraj": {
+   "id": 116,
+   "nazev": "Jihomoravský"
+  },
+  "okres": {
+   "id": 3712,
+   "nazev": "Vyškov"
+  },
+  "obec": "Slavkov u Brna",
+  "castObce": "Slavkov u Brna",
+  "ORP": "Slavkov u Brna",
+  "ulice": null,
+  "gis1": "579263",
+  "gis2": "1168229",
+  "zoc": false,
+  "silnice": null
+ }
+]

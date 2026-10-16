@@ -1,0 +1,243 @@
+{
+ "typy": [
+  {
+   "id": 3100,
+   "nazev": "POŽÁR"
+  },
+  {
+   "id": 3200,
+   "nazev": "DOPRAVNÍ NEHODA"
+  },
+  {
+   "id": 3400,
+   "nazev": "ÚNIK NEBEZPEČNÝCH LÁTEK"
+  },
+  {
+   "id": 3500,
+   "nazev": "TECHNICKÁ POMOC"
+  },
+  {
+   "id": 3550,
+   "nazev": "ZÁCHRANA OSOB A ZVÍŘAT"
+  },
+  {
+   "id": 3700,
+   "nazev": "JINÁ UDÁLOST"
+  },
+  {
+   "id": 3800,
+   "nazev": "PLANÝ POPLACH"
+  },
+  {
+   "id": 3900,
+   "nazev": "TECHNOLOGICKÝ TEST"
+  },
+  {
+   "id": 3600,
+   "nazev": "FORMÁLNĚ ZALOŽENÁ UDÁLOST"
+  },
+  {
+   "id": 5000,
+   "nazev": "UDÁLOST NA OBJEKT"
+  }
+ ],
+ "stavy": [
+  {
+   "id": 620,
+   "nazev": "Exportovaná ZOZ Online"
+  },
+  {
+   "id": 520,
+   "nazev": "Exportovaná do SK"
+  },
+  {
+   "id": 200,
+   "nazev": "Inicializovaná"
+  },
+  {
+   "id": 440,
+   "nazev": "Likvidovaná"
+  },
+  {
+   "id": 430,
+   "nazev": "Lokalizovaná"
+  },
+  {
+   "id": 450,
+   "nazev": "Odjezd poslední jednotky"
+  },
+  {
+   "id": 300,
+   "nazev": "Odložená"
+  },
+  {
+   "id": 120,
+   "nazev": "Odmítnuto"
+  },
+  {
+   "id": 410,
+   "nazev": "Otevřená SaP na cestě"
+  },
+  {
+   "id": 420,
+   "nazev": "Otevřená, SaP na místě"
+  },
+  {
+   "id": 400,
+   "nazev": "Otevřená, bez SaP"
+  },
+  {
+   "id": 780,
+   "nazev": "Potvrzená krajským garantem"
+  },
+  {
+   "id": 210,
+   "nazev": "Převzatá"
+  },
+  {
+   "id": 600,
+   "nazev": "Převzatá VZ"
+  },
+  {
+   "id": 700,
+   "nazev": "Převzatá ZPP"
+  },
+  {
+   "id": 750,
+   "nazev": "Převzatá garantem za SSU"
+  },
+  {
+   "id": 800,
+   "nazev": "Připravená k archivaci"
+  },
+  {
+   "id": 500,
+   "nazev": "Ukončená OS"
+  },
+  {
+   "id": 610,
+   "nazev": "Ukončená VZ"
+  },
+  {
+   "id": 710,
+   "nazev": "Ukončená ZPP"
+  },
+  {
+   "id": 760,
+   "nazev": "Ukončená garantem za SSU"
+  },
+  {
+   "id": 510,
+   "nazev": "Uzavřená OS"
+  },
+  {
+   "id": 130,
+   "nazev": "Zapracováno k řešené události"
+  },
+  {
+   "id": 110,
+   "nazev": "Čekající - přečteno"
+  },
+  {
+   "id": 100,
+   "nazev": "Čekající na odbavení"
+  }
+ ],
+ "podtypy": [
+  {
+   "id": 3214,
+   "nazev": "SE ZRANĚNÍM",
+   "typId": 3200
+  },
+  {
+   "id": 3528,
+   "nazev": "MĚŘENÍ KONCENTRACÍ",
+   "typId": 3500
+  },
+  {
+   "id": 3109,
+   "nazev": "POPELNICE, KONTEJNER",
+   "typId": 3100
+  }
+ ],
+ "okresy": [
+  {
+   "id": 3701,
+   "nazev": "Blansko",
+   "krajId": 116
+  },
+  {
+   "id": 3702,
+   "nazev": "Brno-město",
+   "krajId": 116
+  },
+  {
+   "id": 3703,
+   "nazev": "Brno-venkov",
+   "krajId": 116
+  },
+  {
+   "id": 3704,
+   "nazev": "Břeclav",
+   "krajId": 116
+  },
+  {
+   "id": 3706,
+   "nazev": "Hodonín",
+   "krajId": 116
+  },
+  {
+   "id": 3712,
+   "nazev": "Vyškov",
+   "krajId": 116
+  },
+  {
+   "id": 3713,
+   "nazev": "Znojmo",
+   "krajId": 116
+  },
+  {
+   "id": 3707,
+   "nazev": "Jihlava",
+   "krajId": 108
+  }
+ ],
+ "kraje": [
+  {
+   "id": 7031,
+   "nazev": "Bratislavský kraj"
+  },
+  {
+   "id": 1,
+   "nazev": "GŘ Praha"
+  },
+  {
+   "id": 116,
+   "nazev": "Jihomoravský"
+  },
+  {
+   "id": 124,
+   "nazev": "Olomoucký"
+  },
+  {
+   "id": 94,
+   "nazev": "Pardubický"
+  },
+  {
+   "id": 108,
+   "nazev": "Vysočina"
+  },
+  {
+   "id": 141,
+   "nazev": "Zlínský"
+  }
+ ],
+ "konfigurace": {
+  "title": "Přehled událostí HZS",
+  "reports": "",
+  "show_print": false,
+  "show_stav_udalosti": true,
+  "show_aktualne_zasahujici": true,
+  "krajId": 116
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "domain": "hzs_zasahy",
+  "name": "Zásahy HZS",
+  "codeowners": [
+    "@LochyCZ"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/LochyCZ/HomeAssistant-Zasahy-HZS",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/LochyCZ/HomeAssistant-Zasahy-HZS/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

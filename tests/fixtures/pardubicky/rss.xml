@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title><![CDATA[HZS Pardubického kraje - Výjezdy]]></title>
+  <link>http://www.hzscr.cz/hzs-pardubickeho-kraje.aspx</link>
+  <description>Výjezdy hasičů na území Pardubického kraje</description>
+  <language>cs</language><item>
+    <title><![CDATA[Řečany nad Labem - Labětín]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252734053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/dopravni-nehoda.png" height="30" width="30" alt="Dopravní nehoda" style="float:left;padding:5px;" /> </p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 18:26:29 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252734053</guid>
+  </item><item>
+    <title><![CDATA[Helvíkovice]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252733053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/dopravni-nehoda.png" height="30" width="30" alt="Dopravní nehoda" style="float:left;padding:5px;" /> </p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 17:53:05 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252733053</guid>
+  </item><item>
+    <title><![CDATA[Ústí nad Orlicí]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252732053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/plany-poplach.png" height="30" width="30" alt="Planý poplach" style="float:left;padding:5px;" /> eCall</p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 17:11:48 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252732053</guid>
+  </item><item>
+    <title><![CDATA[Králíky]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252729053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/technicka-pomoc.png" height="30" width="30" alt="Technická pomoc" style="float:left;padding:5px;" /> </p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 16:51:11 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252729053</guid>
+  </item><item>
+    <title><![CDATA[Lanškroun]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252726053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/dopravni-nehoda.png" height="30" width="30" alt="Dopravní nehoda" style="float:left;padding:5px;" /> OA x moto</p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 16:31:45 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252726053</guid>
+  </item><item>
+    <title><![CDATA[Česká Třebová - Parník]]></title>
+    <link>http://www.hzspa.cz/vyjezdy/udalost.php?id=252725053#utm_source=rss&amp;utm_medium=text&amp;utm_campaign=rss</link>
+    <description><![CDATA[<p><img src="http://www.hzspa.cz/vyjezdy/image/zachrana-osob-a-zvirat.png" height="30" width="30" alt="Záchrana osob a zvířat" style="float:left;padding:5px;" /> snesení pacienta</p>]]></description>
+    <pubDate>Fri, 16 Oct 2026 16:08:19 GMT</pubDate>
+    <guid isPermaLink="true">http://www.hzspa.cz/vyjezdy/udalost.php?id=252725053</guid>
+  </item></channel>
+</rss>

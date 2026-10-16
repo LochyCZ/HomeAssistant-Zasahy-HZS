@@ -1,0 +1,77 @@
+[
+ {
+  "id": 1239985072,
+  "casOhlaseni": "2026-10-16T20:51:26",
+  "casVzniku": null,
+  "stavId": 420,
+  "typId": 3200,
+  "podtypId": 3213,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 141,
+   "nazev": "Zlínský"
+  },
+  "okres": {
+   "id": 3705,
+   "nazev": "Zlín"
+  },
+  "obec": "Otrokovice",
+  "castObce": "Otrokovice",
+  "ORP": "Otrokovice",
+  "ulice": "nám. 3. května",
+  "gis1": "530879",
+  "gis2": "1165974",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 1239984072,
+  "casOhlaseni": "2026-10-16T17:40:02",
+  "casVzniku": null,
+  "stavId": 710,
+  "typId": 3500,
+  "podtypId": 3525,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 141,
+   "nazev": "Zlínský"
+  },
+  "okres": {
+   "id": 3708,
+   "nazev": "Kroměříž"
+  },
+  "obec": "Kroměříž",
+  "castObce": "Kroměříž",
+  "ORP": "Kroměříž",
+  "ulice": "Ulička",
+  "gis1": "540505",
+  "gis2": "1155137",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 1239975072,
+  "casOhlaseni": "2026-10-16T16:17:10",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3100,
+  "podtypId": 3109,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 141,
+   "nazev": "Zlínský"
+  },
+  "okres": {
+   "id": 3708,
+   "nazev": "Kroměříž"
+  },
+  "obec": "Kroměříž",
+  "castObce": "Kroměříž",
+  "ORP": "Kroměříž",
+  "ulice": "Albertova",
+  "gis1": "540562",
+  "gis2": "1156232",
+  "zoc": false,
+  "silnice": null
+ }
+]

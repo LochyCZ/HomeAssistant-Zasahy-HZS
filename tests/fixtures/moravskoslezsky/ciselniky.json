@@ -1,0 +1,229 @@
+{
+ "typy": [
+  {
+   "id": 3100,
+   "nazev": "POŽÁR"
+  },
+  {
+   "id": 3200,
+   "nazev": "DOPRAVNÍ NEHODA"
+  },
+  {
+   "id": 3400,
+   "nazev": "ÚNIK NEBEZPEČNÝCH LÁTEK"
+  },
+  {
+   "id": 3500,
+   "nazev": "TECHNICKÁ POMOC"
+  },
+  {
+   "id": 3550,
+   "nazev": "ZÁCHRANA OSOB A ZVÍŘAT"
+  },
+  {
+   "id": 3700,
+   "nazev": "JINÁ UDÁLOST"
+  },
+  {
+   "id": 3800,
+   "nazev": "PLANÝ POPLACH"
+  },
+  {
+   "id": 3900,
+   "nazev": "TECHNOLOGICKÝ TEST"
+  },
+  {
+   "id": 3600,
+   "nazev": "FORMÁLNĚ ZALOŽENÁ UDÁLOST"
+  },
+  {
+   "id": 6000,
+   "nazev": "POHOTOVOST JEDNOTKY"
+  },
+  {
+   "id": 4000,
+   "nazev": "TYPY LETIŠTĚ MOŠNOV"
+  },
+  {
+   "id": 5000,
+   "nazev": "UDÁLOST NA OBJEKT"
+  }
+ ],
+ "stavy": [
+  {
+   "id": 620,
+   "nazev": "Exportovaná ZOZ Online"
+  },
+  {
+   "id": 520,
+   "nazev": "Exportovaná do SK"
+  },
+  {
+   "id": 200,
+   "nazev": "Inicializovaná"
+  },
+  {
+   "id": 440,
+   "nazev": "Likvidovaná"
+  },
+  {
+   "id": 430,
+   "nazev": "Lokalizovaná"
+  },
+  {
+   "id": 450,
+   "nazev": "Odjezd poslední jednotky"
+  },
+  {
+   "id": 300,
+   "nazev": "Odložená"
+  },
+  {
+   "id": 120,
+   "nazev": "Odmítnuto"
+  },
+  {
+   "id": 410,
+   "nazev": "Otevřená SaP na cestě"
+  },
+  {
+   "id": 420,
+   "nazev": "Otevřená, SaP na místě"
+  },
+  {
+   "id": 400,
+   "nazev": "Otevřená, bez SaP"
+  },
+  {
+   "id": 780,
+   "nazev": "Potvrzená krajským garantem"
+  },
+  {
+   "id": 210,
+   "nazev": "Převzatá"
+  },
+  {
+   "id": 600,
+   "nazev": "Převzatá VZ"
+  },
+  {
+   "id": 700,
+   "nazev": "Převzatá ZPP"
+  },
+  {
+   "id": 750,
+   "nazev": "Převzatá garantem za SSU"
+  },
+  {
+   "id": 800,
+   "nazev": "Připravená k archivaci"
+  },
+  {
+   "id": 500,
+   "nazev": "Ukončená OS"
+  },
+  {
+   "id": 610,
+   "nazev": "Ukončená VZ"
+  },
+  {
+   "id": 710,
+   "nazev": "Ukončená ZPP"
+  },
+  {
+   "id": 760,
+   "nazev": "Ukončená garantem za SSU"
+  },
+  {
+   "id": 510,
+   "nazev": "Uzavřená OS"
+  },
+  {
+   "id": 130,
+   "nazev": "Zapracováno k řešené události"
+  },
+  {
+   "id": 110,
+   "nazev": "Čekající - přečteno"
+  },
+  {
+   "id": 100,
+   "nazev": "Čekající na odbavení"
+  }
+ ],
+ "podtypy": [
+  {
+   "id": 5011,
+   "nazev": "NEAKUTNÍ OTEVŘENÍ UZAVŘENÝCH PROSTOR",
+   "typId": 3500
+  },
+  {
+   "id": 3108,
+   "nazev": "DOPRAVNÍ PROSTŘEDKY",
+   "typId": 3100
+  },
+  {
+   "id": 3543,
+   "nazev": "TRANSPORT PACIENTA",
+   "typId": 3550
+  }
+ ],
+ "okresy": [
+  {
+   "id": 3801,
+   "nazev": "Bruntál",
+   "krajId": 132
+  },
+  {
+   "id": 3802,
+   "nazev": "Frýdek-Místek",
+   "krajId": 132
+  },
+  {
+   "id": 3803,
+   "nazev": "Karviná",
+   "krajId": 132
+  },
+  {
+   "id": 3804,
+   "nazev": "Nový Jičín",
+   "krajId": 132
+  },
+  {
+   "id": 3806,
+   "nazev": "Opava",
+   "krajId": 132
+  },
+  {
+   "id": 3807,
+   "nazev": "Ostrava-město",
+   "krajId": 132
+  }
+ ],
+ "kraje": [
+  {
+   "id": 132,
+   "nazev": "Moravskoslezský"
+  },
+  {
+   "id": 124,
+   "nazev": "Olomoucký"
+  },
+  {
+   "id": 61616,
+   "nazev": "Opolskie wojvodství"
+  },
+  {
+   "id": 61624,
+   "nazev": "Śląskie wojvodství"
+  },
+  {
+   "id": 141,
+   "nazev": "Zlínský"
+  },
+  {
+   "id": 7035,
+   "nazev": "Žilinský kraj"
+  }
+ ]
+}

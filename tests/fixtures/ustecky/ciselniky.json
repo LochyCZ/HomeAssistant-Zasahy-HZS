@@ -1,0 +1,241 @@
+{
+ "typy": [
+  {
+   "id": 3100,
+   "nazev": "POŽÁR"
+  },
+  {
+   "id": 3200,
+   "nazev": "DOPRAVNÍ NEHODA"
+  },
+  {
+   "id": 3400,
+   "nazev": "ÚNIK NEBEZPEČNÝCH LÁTEK"
+  },
+  {
+   "id": 3500,
+   "nazev": "TECHNICKÁ POMOC"
+  },
+  {
+   "id": 3550,
+   "nazev": "ZÁCHRANA OSOB A ZVÍŘAT"
+  },
+  {
+   "id": 3700,
+   "nazev": "JINÁ UDÁLOST"
+  },
+  {
+   "id": 3800,
+   "nazev": "PLANÝ POPLACH"
+  },
+  {
+   "id": 3900,
+   "nazev": "TECHNOLOGICKÝ TEST"
+  },
+  {
+   "id": 3600,
+   "nazev": "FORMÁLNĚ ZALOŽENÁ UDÁLOST"
+  },
+  {
+   "id": 5000,
+   "nazev": "UDÁLOST NA OBJEKT"
+  }
+ ],
+ "stavy": [
+  {
+   "id": 620,
+   "nazev": "Exportovaná ZOZ Online"
+  },
+  {
+   "id": 520,
+   "nazev": "Exportovaná do SK"
+  },
+  {
+   "id": 200,
+   "nazev": "Inicializovaná"
+  },
+  {
+   "id": 440,
+   "nazev": "Likvidovaná"
+  },
+  {
+   "id": 430,
+   "nazev": "Lokalizovaná"
+  },
+  {
+   "id": 450,
+   "nazev": "Odjezd poslední jednotky"
+  },
+  {
+   "id": 300,
+   "nazev": "Odložená"
+  },
+  {
+   "id": 120,
+   "nazev": "Odmítnuto"
+  },
+  {
+   "id": 410,
+   "nazev": "Otevřená SaP na cestě"
+  },
+  {
+   "id": 420,
+   "nazev": "Otevřená, SaP na místě"
+  },
+  {
+   "id": 400,
+   "nazev": "Otevřená, bez SaP"
+  },
+  {
+   "id": 780,
+   "nazev": "Potvrzená krajským garantem"
+  },
+  {
+   "id": 210,
+   "nazev": "Převzatá"
+  },
+  {
+   "id": 600,
+   "nazev": "Převzatá VZ"
+  },
+  {
+   "id": 700,
+   "nazev": "Převzatá ZPP"
+  },
+  {
+   "id": 750,
+   "nazev": "Převzatá garantem za SSU"
+  },
+  {
+   "id": 800,
+   "nazev": "Připravená k archivaci"
+  },
+  {
+   "id": 500,
+   "nazev": "Ukončená OS"
+  },
+  {
+   "id": 610,
+   "nazev": "Ukončená VZ"
+  },
+  {
+   "id": 710,
+   "nazev": "Ukončená ZPP"
+  },
+  {
+   "id": 760,
+   "nazev": "Ukončená garantem za SSU"
+  },
+  {
+   "id": 510,
+   "nazev": "Uzavřená OS"
+  },
+  {
+   "id": 130,
+   "nazev": "Zapracováno k řešené události"
+  },
+  {
+   "id": 110,
+   "nazev": "Čekající - přečteno"
+  },
+  {
+   "id": 100,
+   "nazev": "Čekající na odbavení"
+  }
+ ],
+ "podtypy": [
+  {
+   "id": 3401,
+   "nazev": "NA POZEMNÍ KOMUNIKACI",
+   "typId": 3400
+  },
+  {
+   "id": 3214,
+   "nazev": "SE ZRANĚNÍM",
+   "typId": 3200
+  },
+  {
+   "id": 3523,
+   "nazev": "UZAVŘENÉ PROSTORY, VÝTAH",
+   "typId": 3550
+  },
+  {
+   "id": 3111,
+   "nazev": "ODPAD, OSTATNÍ",
+   "typId": 3100
+  }
+ ],
+ "okresy": [
+  {
+   "id": 3503,
+   "nazev": "Chomutov",
+   "krajId": 60
+  },
+  {
+   "id": 3502,
+   "nazev": "Děčín",
+   "krajId": 60
+  },
+  {
+   "id": 3506,
+   "nazev": "Litoměřice",
+   "krajId": 60
+  },
+  {
+   "id": 3507,
+   "nazev": "Louny",
+   "krajId": 60
+  },
+  {
+   "id": 3508,
+   "nazev": "Most",
+   "krajId": 60
+  },
+  {
+   "id": 3509,
+   "nazev": "Teplice",
+   "krajId": 60
+  },
+  {
+   "id": 3510,
+   "nazev": "Ústí nad Labem",
+   "krajId": 60
+  },
+  {
+   "id": 3401,
+   "nazev": "Domažlice",
+   "krajId": 43
+  },
+  {
+   "id": 3203,
+   "nazev": "Kladno",
+   "krajId": 27
+  }
+ ],
+ "kraje": [
+  {
+   "id": 51,
+   "nazev": "Karlovarský"
+  },
+  {
+   "id": 78,
+   "nazev": "Liberecký"
+  },
+  {
+   "id": 27,
+   "nazev": "Středočeský"
+  },
+  {
+   "id": 60,
+   "nazev": "Ústecký"
+  }
+ ],
+ "konfigurace": {
+  "title": "UZAVŘENÉ ZÁSAHY JPO ÚSTECKÉHO KRAJE",
+  "reports": "http://10.176.177.16:8070/activeReport/",
+  "show_print": true,
+  "show_stav_udalosti": true,
+  "show_aktualne_zasahujici": false,
+  "krajId": 60
+ }
+}

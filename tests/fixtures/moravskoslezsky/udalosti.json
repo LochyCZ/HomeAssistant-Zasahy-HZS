@@ -1,0 +1,74 @@
+[
+ {
+  "id": 746070081,
+  "casOhlaseni": "2026-10-16T17:23:51.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3500,
+  "podtypId": 5011,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 132,
+   "nazev": "Moravskoslezský"
+  },
+  "okres": {
+   "id": 3807,
+   "nazev": "Ostrava-město"
+  },
+  "obec": "Ostrava",
+  "castObce": "Hrabůvka",
+  "ORP": "Ostrava",
+  "ulice": "Dr. Martínka",
+  "gis1": "472118",
+  "gis2": "1106829",
+  "zoc": true
+ },
+ {
+  "id": 746069081,
+  "casOhlaseni": "2026-10-16T16:58:08.000Z",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3550,
+  "podtypId": 3543,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 132,
+   "nazev": "Moravskoslezský"
+  },
+  "okres": {
+   "id": 3802,
+   "nazev": "Frýdek-Místek"
+  },
+  "obec": "Brušperk",
+  "castObce": "Brušperk",
+  "ORP": "Frýdek-Místek",
+  "ulice": "Na vyhlídce",
+  "gis1": "475898",
+  "gis2": "1116825",
+  "zoc": false
+ },
+ {
+  "id": 746010081,
+  "casOhlaseni": "2026-10-16T10:04:30.000Z",
+  "casVzniku": null,
+  "stavId": 600,
+  "typId": 3100,
+  "podtypId": 3108,
+  "poznamkaProMedia": null,
+  "kraj": {
+   "id": 132,
+   "nazev": "Moravskoslezský"
+  },
+  "okres": {
+   "id": 3801,
+   "nazev": "Bruntál"
+  },
+  "obec": "Rudná pod Pradědem",
+  "castObce": "Stará Rudná",
+  "ORP": "Bruntál",
+  "ulice": null,
+  "gis1": "532409",
+  "gis2": "1074323",
+  "zoc": false
+ }
+]

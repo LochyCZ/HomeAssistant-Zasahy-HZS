@@ -1,0 +1,127 @@
+[
+ {
+  "id": 356494042,
+  "casOhlaseni": "2026-10-15T22:05:33",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3550,
+  "podtypId": 3523,
+  "poznamkaProMedia": "Osoby vyproštěny z výtahu.",
+  "kraj": {
+   "id": 60,
+   "nazev": "Ústecký"
+  },
+  "okres": {
+   "id": 3508,
+   "nazev": "Most"
+  },
+  "obec": "Litvínov",
+  "castObce": "Hamr",
+  "ORP": "Litvínov",
+  "ulice": "Přátelství",
+  "gis1": "794580",
+  "gis2": "978816",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 356492042,
+  "casOhlaseni": "2026-10-15T20:42:09",
+  "casVzniku": null,
+  "stavId": 600,
+  "typId": 3550,
+  "podtypId": 3523,
+  "poznamkaProMedia": "otevření bytu",
+  "kraj": {
+   "id": 60,
+   "nazev": "Ústecký"
+  },
+  "okres": {
+   "id": 3502,
+   "nazev": "Děčín"
+  },
+  "obec": "Děčín",
+  "castObce": "Děčín I-Děčín",
+  "ORP": "Děčín",
+  "ulice": "Hálkova",
+  "gis1": "746443",
+  "gis2": "964268",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 356484042,
+  "casOhlaseni": "2026-10-15T19:12:08",
+  "casVzniku": null,
+  "stavId": 600,
+  "typId": 3100,
+  "podtypId": 3111,
+  "poznamkaProMedia": "Prověření plamenů viděných z dálky.",
+  "kraj": {
+   "id": 60,
+   "nazev": "Ústecký"
+  },
+  "okres": {
+   "id": 3506,
+   "nazev": "Litoměřice"
+  },
+  "obec": "Třebušín",
+  "castObce": "Dolní Týnec",
+  "ORP": "Litoměřice",
+  "ulice": null,
+  "gis1": "747778",
+  "gis2": "984949",
+  "zoc": false,
+  "silnice": null
+ },
+ {
+  "id": 356469042,
+  "casOhlaseni": "2026-10-15T12:25:51",
+  "casVzniku": null,
+  "stavId": 760,
+  "typId": 3200,
+  "podtypId": 3214,
+  "poznamkaProMedia": "Převrácený kamion na dálničním sjezdu Praha - Německo, směr Teplice.",
+  "kraj": {
+   "id": 60,
+   "nazev": "Ústecký"
+  },
+  "okres": {
+   "id": 3510,
+   "nazev": "Ústí nad Labem"
+  },
+  "obec": "Řehlovice",
+  "castObce": "Stadice",
+  "ORP": "Ústí nad Labem",
+  "ulice": null,
+  "gis1": "766950",
+  "gis2": "980833",
+  "zoc": false,
+  "silnice": "I. třídy"
+ },
+ {
+  "id": 356442042,
+  "casOhlaseni": "2026-10-14T23:07:48",
+  "casVzniku": null,
+  "stavId": 510,
+  "typId": 3400,
+  "podtypId": 3401,
+  "poznamkaProMedia": "Olej na komunikaci.",
+  "kraj": {
+   "id": 60,
+   "nazev": "Ústecký"
+  },
+  "okres": {
+   "id": 3507,
+   "nazev": "Louny"
+  },
+  "obec": "Toužetín",
+  "castObce": "Sulec",
+  "ORP": "Louny",
+  "ulice": null,
+  "gis1": "777135",
+  "gis2": "1013612",
+  "zoc": false,
+  "silnice": "D7"
+ }
+]

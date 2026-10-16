@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fire brigade incidents (HZS)",
+        "description": "Pick a region. The integration reads the public HZS incident overview of that region.",
+        "data": {
+          "kraj": "Region"
+        }
+      },
+      "url": {
+        "title": "Custom URL",
+        "description": "URL of an HZS incident overview running on the WebOhled system. The API address is detected automatically.",
+        "data": {
+          "base_url": "Incident overview URL"
+        }
+      },
+      "filtr": {
+        "title": "Incident filter – {kraj}",
+        "description": "Pick a district and optionally only some incident types. Empty selection = all types.",
+        "data": {
+          "okres_id": "District",
+          "typy": "Incident types"
+        }
+      },
+      "vyber_kraje": {
+        "title": "Which region?",
+        "description": "This site does not say which region it belongs to. Pick it.",
+        "data": {
+          "kraj_id": "Region"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the server",
+      "invalid_api": "No HZS incident overview API at this URL"
+    },
+    "abort": {
+      "already_configured": "This region and district is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "typy": "Incident types (empty = all)",
+          "scan_interval": "Polling interval",
+          "nacitat_techniku": "Load responding units and vehicles",
+          "mapa": "Show incidents on the map"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dnes": {
+        "name": "Incidents today"
+      },
+      "aktivni": {
+        "name": "Active incidents"
+      },
+      "tyden": {
+        "name": "Incidents last 7 days"
+      },
+      "posledni": {
+        "name": "Latest incident"
+      },
+      "posledni_cas": {
+        "name": "Latest incident time"
+      },
+      "nejblizsi": {
+        "name": "Nearest incident today"
+      }
+    }
+  }
+}
