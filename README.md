@@ -4,12 +4,13 @@
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.12%2B-03A9F4.svg)](https://www.home-assistant.io/)
 [![Version](https://img.shields.io/github/v/release/LochyCZ/HomeAssistant-Zasahy-HZS)](https://github.com/LochyCZ/HomeAssistant-Zasahy-HZS/releases)
 
-Integrace pro Home Assistant, která sleduje **výjezdy hasičů v osmi krajích ČR**.
+Integrace pro Home Assistant, která sleduje **výjezdy hasičů v osmi krajích ČR**
+a dopravní nehody v Libereckém kraji.
 Z veřejných přehledů krajských HZS dělá senzory, body na mapě a eventy pro notifikace.
 Kde to zdroj dovolí, ukáže i **zasahující jednotky** a **vzdálenost zásahu od tvého domova**.
 
 > *English: Home Assistant custom integration that tracks fire brigade (HZS) incidents in eight
-> Czech regions. Provides sensors, map entities, events for new incidents and status changes,
+> Czech regions (plus traffic accidents in the Liberec region). Provides sensors, map entities, events for new incidents and status changes,
 > responding units and distance from home. The UI is in Czech and English.*
 
 ## Podporované kraje
@@ -18,6 +19,7 @@ Kde to zdroj dovolí, ukáže i **zasahující jednotky** a **vzdálenost zásah
 |---|---|:---:|:---:|---|
 | Jihomoravský | [udalosti.firebrno.cz](https://udalosti.firebrno.cz/) | ✅ | ✅ | 7 dní |
 | Královéhradecký | [udalostikhk.hzscr.cz](https://udalostikhk.hzscr.cz/) | ✅ | ✅ | 7 dní |
+| Liberecký – jen dopravní nehody | [Portál krizového řízení](https://pkr.kraj-lbc.cz/pkr/probihajici-udalosti/) | – | ✅ | aktuální ² |
 | Moravskoslezský | [webohled.hzsmsk.cz](http://webohled.hzsmsk.cz/) | ✅ | ✅ | 7 dní |
 | Pardubický | [hzspa.cz/vyjezdy](https://www.hzspa.cz/vyjezdy/aktualni-vyjezdy.php) | ✅ | – | dnes a včera |
 | Středočeský | [Portál krizového řízení](https://pkr.kr-stredocesky.cz/pkr/zasahy-jpo/) | – | – | 7 dní ¹ |
@@ -25,10 +27,11 @@ Kde to zdroj dovolí, ukáže i **zasahující jednotky** a **vzdálenost zásah
 | Vysočina | [webohled.hasici-vysocina.cz](http://webohled.hasici-vysocina.cz/udalosti/) | ✅ | ✅ | 7 dní |
 | Zlínský | [webohledzlk.hzscr.cz](https://webohledzlk.hzscr.cz/udalosti/) | ✅ | ✅ | 7 dní |
 
-¹ U celého Středočeského kraje nejvýš 150 posledních zásahů, u okresu celý týden.
+¹ U celého Středočeského kraje nejvýš 150 posledních zásahů, u okresu celý týden.<br>
+² Jen nehody, které portál právě uvádí. Požáry a jiné zásahy Liberecký kraj nezveřejňuje.
 
-Šest krajů běží na stejném systému HZS (WebOhled). Středočeský a Pardubický mají vlastní
-weby, které integrace čte zvlášť, viz [Zvláštnosti krajů](#zvláštnosti-krajů).
+Šest krajů běží na stejném systému HZS (WebOhled). Středočeský, Pardubický a Liberecký
+čte integrace z vlastních webů krajů, viz [Zvláštnosti krajů](#zvláštnosti-krajů).
 
 Pokud systém WebOhled používá i jiný kraj, zvol v nastavení **Jiná adresa…** a vlož adresu
 jeho přehledu událostí. Adresu API integrace dohledá sama.
@@ -258,6 +261,10 @@ Jednotlivé weby se přesto v drobnostech liší a integrace to sjednocuje:
 - **Adresa API:** Zlínský ji má na kořeni serveru (`/api/`), ne pod adresou webu.
 - **Číslo kraje:** Moravskoslezský web ho neuvádí, integrace ho zná sama. U vlastní adresy
   se na kraj zeptá.
+- **Certifikát:** Královéhradecký server neposílá celý řetězec SSL certifikátů. Prohlížeč
+  si chybějící mezilehlý certifikát stáhne sám a Python ne. Integrace to proto dělá jako
+  prohlížeč: stáhne ho z adresy uvedené v certifikátu serveru. Ověřování se tím nevypíná,
+  řetězec musí pořád končit u důvěryhodné kořenové autority.
 
 ### Středočeský kraj
 
@@ -292,6 +299,24 @@ Rozdíly proti ostatním krajům:
 - **Bez souřadnic**, takže bez mapy a vzdálenosti.
 - **U jednotek chybí typ vozidla.** Pole `technika` obsahuje jen název jednotky.
 
+### Liberecký kraj – jen dopravní nehody
+
+HZS Libereckého kraje výjezdy veřejně nezveřejňuje a portál krizového řízení kraje
+nemá stránku se zásahy jednotek požární ochrany. Má jen **Dopravní informace**
+(dopravní zpravodajství). Integrace z nich bere **dopravní nehody**. Uzavírky
+a překážky na silnici vynechává, protože nejde o zásahy.
+
+- **Požáry, technická pomoc ani jiné zásahy tu nejsou.**
+- **Souřadnice ano**, takže funguje mapa i vzdálenost od domova.
+- **Jen aktuální nehody.** Portál ukazuje nehody, které právě probíhají nebo nedávno
+  skončily. Starší z výpisu mizí, senzor „za 7 dní“ proto ukazuje jen je.
+- **„Probíhá“ do předpokládaného konce.** Portál u každé nehody uvádí odhad ukončení.
+  Po něm se nehoda bere jako ukončená a pošle se event změny stavu.
+- **Okres podle ORP.** Portál uvádí jen obec s rozšířenou působností a integrace ji
+  přiřadí k okresu (Česká Lípa, Jablonec nad Nisou, Liberec, Semily).
+- **Ne každá nehoda je zásah hasičů.** Jsou tu i nehody, u kterých byla jen policie.
+  Kdo zasahoval, bývá v poli `poznamka` (např. „Na místě HZS a PČR.“).
+
 ## Přechod z integrace „Zásahy JPO – Středočeský kraj“
 
 Tato integrace nahrazuje starší [Zasahy-JPO-Stredocesky-kraj](https://github.com/LochyCZ/Zasahy-JPO-Stredocesky-kraj).
@@ -300,6 +325,30 @@ Tato integrace nahrazuje starší [Zasahy-JPO-Stredocesky-kraj](https://github.c
 2. V automatizacích přepiš eventy `pkr_zasahy_novy_zasah` na `hzs_zasahy_novy_zasah`
    a `pkr_zasahy_aktualizace_zasahu` na `hzs_zasahy_zmena_stavu`.
 3. Uprav ID senzorů v kartách. Atribut se stále jmenuje `zasahy`.
+
+## Řešení potíží
+
+### „Server se nepodařilo kontaktovat“
+
+Integrace se k webu kraje nepřipojila. Přesný důvod je v logu: **Nastavení → Systém →
+Protokoly**, hledej `hzs_zasahy` a řádek „Zdroj … není dostupný“.
+
+- **`Connect call failed` nebo `Cannot connect to host` bez zmínky o certifikátu** –
+  server spojení z tvé sítě odmítá. Na straně integrace se to opravit nedá.
+- **`certificate verify failed: unable to get local issuer certificate`** – server
+  neposílá celý řetězec certifikátů. Integrace ho zkusí doplnit sama a v logu to uvidíš
+  jako „neposílá celý řetězec certifikátů, doplněno: …“. Když se doplnit nepodaří
+  (řádek „Řetězec certifikátů … se nepodařilo doplnit“), založ prosím issue i s tím řádkem.
+
+Ze sítě, kde běží Home Assistant, to ověříš v doplňku **Terminal & SSH**:
+
+```bash
+curl -sv https://udalostikhk.hzscr.cz/api/konfigurace -o /dev/null
+```
+
+Když `curl` hlásí `unable to get local issuer certificate`, jde o neúplný řetězec
+(viz výše). Když spojení vůbec nenaváže a v prohlížeči na jiném zařízení stránka funguje,
+server blokuje síť tvého Home Assistantu.
 
 ## Omezení
 
