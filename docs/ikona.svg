@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 36 460 460" width="512" height="512">
+  <defs>
+    <linearGradient id="pin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EF5350"/>
+      <stop offset="1" stop-color="#B71C1C"/>
+    </linearGradient>
+    <linearGradient id="plamen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FF8F00"/>
+    </linearGradient>
+  </defs>
+  <!-- špendlík mapy -->
+  <path d="M256 492 C 206 420 86 330 86 210 A 170 170 0 1 1 426 210 C 426 330 306 420 256 492 Z" fill="url(#pin)"/>
+  <!-- bílý kruh pro plamen -->
+  <circle cx="256" cy="210" r="128" fill="#FFFFFF"/>
+  <!-- plamen -->
+  <path d="M256 98 C 286 146 336 178 336 246 C 336 300 300 332 256 332 C 212 332 176 300 176 250 C 176 212 196 186 212 162 C 216 194 230 210 246 216 C 236 176 238 132 256 98 Z" fill="#D32F2F"/>
+  <path d="M258 206 C 276 236 300 254 300 286 C 300 314 280 330 256 330 C 232 330 212 314 212 290 C 212 268 226 252 238 238 C 242 256 250 264 260 266 C 254 248 250 228 258 206 Z" fill="url(#plamen)"/>
+</svg>
