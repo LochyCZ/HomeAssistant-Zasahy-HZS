@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 from typing import Any
 
 import voluptuous as vol
@@ -38,6 +39,7 @@ from .const import (
     MIN_SCAN_INTERVAL,
     USER_AGENT,
     VLASTNI,
+    ZDROJ_LBC,
     ZDROJ_PKR,
     ZDROJ_WEBOHLED,
 )
@@ -66,7 +68,12 @@ def _typy_selector(cis: Ciselniky) -> selector.SelectSelector:
     )
 
 
-def _chyba(err: WebohledError) -> str:
+_LOGGER = logging.getLogger(__name__)
+
+
+def _chyba(err: WebohledError, url: str) -> str:
+    """Kód chyby pro formulář; skutečný důvod jde do logu (odmítnuté spojení, certifikát…)."""
+    _LOGGER.warning("Zdroj %s není dostupný: %s", url, err)
     return "cannot_connect" if isinstance(err, WebohledConnectionError) else "invalid_api"
 
 
@@ -98,7 +105,7 @@ class HzsConfigFlow(ConfigFlow, domain=DOMAIN):
             try:
                 self._cis = await api.ciselniky(kraj.kraj_id)
             except WebohledError as err:
-                errors["base"] = _chyba(err)
+                errors["base"] = _chyba(err, kraj.api)
             else:
                 return await self.async_step_filtr()
 
@@ -132,7 +139,7 @@ class HzsConfigFlow(ConfigFlow, domain=DOMAIN):
                 self._api = api.api_url
                 self._cis = await api.ciselniky()
             except WebohledError as err:
-                errors["base"] = _chyba(err)
+                errors["base"] = _chyba(err, self._web)
             else:
                 if self._cis.kraj_id is None:
                     return await self.async_step_vyber_kraje()
@@ -205,7 +212,7 @@ class HzsConfigFlow(ConfigFlow, domain=DOMAIN):
                     CONF_TYPY: user_input.get(CONF_TYPY, []),
                     CONF_SCAN_INTERVAL: (
                         DEFAULT_SCAN_INTERVAL_PKR
-                        if self._zdroj == ZDROJ_PKR
+                        if self._zdroj in (ZDROJ_PKR, ZDROJ_LBC)
                         else DEFAULT_SCAN_INTERVAL
                     ),
                     CONF_TECHNIKA: True,
@@ -262,8 +269,10 @@ class HzsOptionsFlow(OptionsFlow):
                 )
             ),
         }
-        # Středočeský a Pardubický web nemají techniku ze stejného API ani souřadnice
-        if self.config_entry.data.get(CONF_ZDROJ, ZDROJ_WEBOHLED) == ZDROJ_WEBOHLED:
+        # Techniku umí jen WebOhled; souřadnice (mapu) WebOhled a Liberecký portál
+        zdroj = self.config_entry.data.get(CONF_ZDROJ, ZDROJ_WEBOHLED)
+        if zdroj == ZDROJ_WEBOHLED:
             schema[vol.Required(CONF_TECHNIKA, default=opts.get(CONF_TECHNIKA, True))] = bool
+        if zdroj in (ZDROJ_WEBOHLED, ZDROJ_LBC):
             schema[vol.Required(CONF_MAPA, default=opts.get(CONF_MAPA, True))] = bool
         return self.async_show_form(step_id="init", data_schema=vol.Schema(schema))

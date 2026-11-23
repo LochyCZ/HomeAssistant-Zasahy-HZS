@@ -317,8 +317,10 @@ class PkrApi:
                 longitude=None,
                 stupen=r.stupen or None,
             )
-        # zapomenout identity starší než týden
-        hranice = datetime.now(timezone.utc) - timedelta(days=10)
+        # zapomenout identity o víc než 10 dní starší než nejnovější řádek výpisu
+        # (podle dat, ne hodin – výpis pokrývá zhruba týden)
+        nejnovejsi = max((r.cas for r in radky), default=datetime.now(timezone.utc))
+        hranice = nejnovejsi - timedelta(days=10)
         for klic in list(self._identity):
             self._identity[klic] = [z for z in self._identity[klic] if z[2] >= hranice]
             if not self._identity[klic]:

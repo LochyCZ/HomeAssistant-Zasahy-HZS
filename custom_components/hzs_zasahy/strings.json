@@ -32,7 +32,7 @@
       }
     },
     "error": {
-      "cannot_connect": "Failed to connect to the server",
+      "cannot_connect": "Failed to connect to the server. The exact reason is in the Home Assistant log (Settings → System → Logs, search for hzs_zasahy).",
       "invalid_api": "No HZS incident overview API at this URL"
     },
     "abort": {

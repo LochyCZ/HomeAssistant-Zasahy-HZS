@@ -8,6 +8,7 @@ DOMAIN = "hzs_zasahy"
 ZDROJ_WEBOHLED = "webohled"
 ZDROJ_PKR = "pkr"
 ZDROJ_HZSPA = "hzspa"
+ZDROJ_LBC = "lbc"
 
 
 class Kraj(NamedTuple):
@@ -20,7 +21,8 @@ class Kraj(NamedTuple):
 
 # Známé zdroje, ověřené na živých datech. Většina krajů má Přehled událostí HZS
 # (systém WebOhled); Středočeský jen Portál krizového řízení (ZDROJ_PKR, viz pkr.py)
-# a Pardubický vlastní web hzspa.cz (ZDROJ_HZSPA, viz hzspa.py).
+# a Pardubický vlastní web hzspa.cz (ZDROJ_HZSPA, viz hzspa.py). Liberecký výjezdy
+# nezveřejňuje vůbec – bereme aspoň dopravní nehody z portálu kraje (ZDROJ_LBC, viz lbc.py).
 # Adresu API a číslo kraje držíme zvlášť: Zlínský kraj má API jinde než web
 # a Moravskoslezský nemá /api/konfigurace, ze které by šlo číslo kraje zjistit.
 KRAJE: dict[str, Kraj] = {
@@ -32,6 +34,13 @@ KRAJE: dict[str, Kraj] = {
         "https://udalostikhk.hzscr.cz/",
         "https://udalostikhk.hzscr.cz/api/",
         86,
+    ),
+    "liberecky": Kraj(
+        "Liberecký kraj – jen dopravní nehody",
+        "https://pkr.kraj-lbc.cz/pkr/probihajici-udalosti/",
+        "https://pkr.kraj-lbc.cz/pkr/probihajici-udalosti/",
+        78,
+        ZDROJ_LBC,
     ),
     "moravskoslezsky": Kraj(
         "Moravskoslezský kraj", "http://webohled.hzsmsk.cz/", "http://webohled.hzsmsk.cz/api/", 132
