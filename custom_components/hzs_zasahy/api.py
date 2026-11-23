@@ -8,7 +8,9 @@ from __future__ import annotations
 import asyncio
 from dataclasses import dataclass, field, replace
 from datetime import datetime, timezone
+import logging
 import re
+import ssl
 from typing import Any
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
@@ -16,6 +18,9 @@ from zoneinfo import ZoneInfo
 import aiohttp
 
 from .krovak import krovak_to_wgs84
+from .ssl_retezec import RetezecError, doplnit_retezec
+
+_LOGGER = logging.getLogger(__name__)
 
 TZ = ZoneInfo("Europe/Prague")
 
@@ -289,24 +294,70 @@ class WebohledApi:
 
     umi_techniku = True
 
-    def __init__(self, session: aiohttp.ClientSession, api_url: str, user_agent: str) -> None:
+    def __init__(
+        self,
+        session: aiohttp.ClientSession,
+        api_url: str,
+        user_agent: str,
+        cafile: str | None = None,
+    ) -> None:
         self._session = session
         self.api_url = api_url.rstrip("/") + "/"
         self._api = self.api_url
         self._headers = {"User-Agent": user_agent, "Accept": "application/json"}
+        self._cafile = cafile  # jen pro testy; jinak certifi jako zbytek HA
+        # SSL kontext s doplněným řetězcem certifikátů (viz ssl_retezec.py)
+        self._ssl: ssl.SSLContext | None = None
+        self._oprava_retezce = asyncio.Lock()
+        self._oprava_zkousena = False
 
     async def _get(self, path: str, params: list[tuple[str, str]] | None = None) -> Any:
         try:
+            return await self._dotaz(path, params)
+        except aiohttp.ClientConnectorCertificateError as err:
+            # Server neposílá celý řetězec certifikátů – doplníme ho jako prohlížeč a zkusíme znovu
+            if not await self._doplnit_retezec():
+                raise WebohledConnectionError(str(err)) from err
+        try:
+            return await self._dotaz(path, params)
+        except aiohttp.ClientConnectorCertificateError as err:
+            raise WebohledConnectionError(str(err)) from err
+
+    async def _dotaz(self, path: str, params: list[tuple[str, str]] | None) -> Any:
+        kwargs: dict[str, Any] = {"params": params, "headers": self._headers}
+        if self._ssl is not None:
+            kwargs["ssl"] = self._ssl
+        try:
             async with asyncio.timeout(30):
-                resp = await self._session.get(self._api + path, params=params, headers=self._headers)
+                resp = await self._session.get(self._api + path, **kwargs)
                 if resp.status >= 400:
                     text = await resp.text()
                     raise WebohledError(f"HTTP {resp.status}: {text[:200]}")
                 return await resp.json(content_type=None)
+        except aiohttp.ClientConnectorCertificateError:
+            raise
         except (aiohttp.ClientError, TimeoutError) as err:
             raise WebohledConnectionError(str(err)) from err
         except ValueError as err:
             raise WebohledError(f"Odpověď není JSON: {err}") from err
+
+    async def _doplnit_retezec(self) -> bool:
+        """Jednou za život klienta; souběžné dotazy počkají na stejný výsledek."""
+        async with self._oprava_retezce:
+            if self._ssl is not None:
+                return True
+            if self._oprava_zkousena:
+                return False
+            self._oprava_zkousena = True
+            url = urlsplit(self._api)
+            try:
+                self._ssl = await doplnit_retezec(
+                    self._session, url.hostname or "", url.port or 443, self._cafile
+                )
+            except RetezecError as err:
+                _LOGGER.warning("Řetězec certifikátů pro %s se nepodařilo doplnit: %s", url.hostname, err)
+                return False
+            return True
 
     async def _konfigurace(self) -> dict[str, Any] | None:
         """Starší instance (např. Moravskoslezský kraj) endpoint /konfigurace nemají."""

@@ -32,7 +32,7 @@
       }
     },
     "error": {
-      "cannot_connect": "Server se nepodařilo kontaktovat",
+      "cannot_connect": "Server se nepodařilo kontaktovat. Přesný důvod najdeš v logu Home Assistantu (Nastavení → Systém → Protokoly, hledej hzs_zasahy).",
       "invalid_api": "Na adrese není API Přehledu událostí HZS"
     },
     "abort": {
