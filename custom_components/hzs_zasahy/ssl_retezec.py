@@ -160,16 +160,30 @@ def vytvor_kontext(mezilehle: list[x509.Certificate], cafile: str | None = None)
     return ctx
 
 
+def popis_certifikatu(cert: x509.Certificate) -> str:
+    return f"{cert.subject.rfc4514_string()} (vydal {cert.issuer.rfc4514_string()})"
+
+
 async def doplnit_retezec(
     session: aiohttp.ClientSession, host: str, port: int = 443, cafile: str | None = None
-) -> ssl.SSLContext:
-    """SSL kontext, se kterým projde server s neúplným řetězcem certifikátů."""
+) -> tuple[ssl.SSLContext, str]:
+    """SSL kontext, se kterým projde server s neúplným řetězcem certifikátů.
+
+    Vrací i popis řetězce do logu (pro případ, že ověření selže i potom).
+    """
     list_cert = await certifikat_serveru(host, port)
-    mezilehle = await stahni_mezilehle(session, list_cert)
-    _LOGGER.info(
-        "Server %s neposílá celý řetězec certifikátů, doplněno: %s",
-        host,
-        ", ".join(c.subject.rfc4514_string() for c in mezilehle),
+    adresy = adresy_vydavatele(list_cert)
+    try:
+        mezilehle = await stahni_mezilehle(session, list_cert)
+    except RetezecError as err:
+        raise RetezecError(
+            f"{err}; certifikát serveru: {popis_certifikatu(list_cert)}, CA Issuers: {adresy or 'žádné'}"
+        ) from err
+    popis = "; ".join(
+        [f"server: {popis_certifikatu(list_cert)}", f"CA Issuers: {', '.join(adresy)}"]
+        + [f"doplněno: {popis_certifikatu(c)}" for c in mezilehle]
     )
+    _LOGGER.warning("Server %s neposílá celý řetězec certifikátů – %s", host, popis)
     loop = asyncio.get_running_loop()
-    return await loop.run_in_executor(None, vytvor_kontext, mezilehle, cafile)
+    ctx = await loop.run_in_executor(None, vytvor_kontext, mezilehle, cafile)
+    return ctx, popis

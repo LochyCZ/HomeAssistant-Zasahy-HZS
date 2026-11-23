@@ -310,6 +310,7 @@ class WebohledApi:
         self._ssl: ssl.SSLContext | None = None
         self._oprava_retezce = asyncio.Lock()
         self._oprava_zkousena = False
+        self._popis_retezce = ""
 
     async def _get(self, path: str, params: list[tuple[str, str]] | None = None) -> Any:
         try:
@@ -321,6 +322,12 @@ class WebohledApi:
         try:
             return await self._dotaz(path, params)
         except aiohttp.ClientConnectorCertificateError as err:
+            _LOGGER.warning(
+                "Certifikát %s se neověřil ani s doplněným řetězcem – kořenová autorita "
+                "pravděpodobně není v úložišti certifikátů Home Assistantu. Řetězec: %s",
+                urlsplit(self._api).hostname,
+                self._popis_retezce,
+            )
             raise WebohledConnectionError(str(err)) from err
 
     async def _dotaz(self, path: str, params: list[tuple[str, str]] | None) -> Any:
@@ -351,7 +358,7 @@ class WebohledApi:
             self._oprava_zkousena = True
             url = urlsplit(self._api)
             try:
-                self._ssl = await doplnit_retezec(
+                self._ssl, self._popis_retezce = await doplnit_retezec(
                     self._session, url.hostname or "", url.port or 443, self._cafile
                 )
             except RetezecError as err:
